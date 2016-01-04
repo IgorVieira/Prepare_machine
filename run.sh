@@ -11,7 +11,6 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     FALSE "nodejs" "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."\
     FALSE "Bower" "Bower a package manager for the web (Requer NodeJS)"\
     FALSE "Ruby" "RVM e Ruby"\
-    FALSE "Rails" "Ruby on Rails® is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. "\
     FALSE "Spotify" "Spotify is a digital music service that gives you access to millions of songs."\
     FALSE "PostgreSQL" "The world's most advanced open source database.."\
     FALSE "MongoDB" "A GIANT LEAP"\
