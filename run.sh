@@ -15,7 +15,7 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     FALSE "Spotify" "Spotify is a digital music service that gives you access to millions of songs."\
     FALSE "PostgreSQL" "The world's most advanced open source database.."\
     FALSE "MongoDB" "A GIANT LEAP"\
-    FALSE "Heroku toolbelt" "Everything you need to get started using heroku"
+    FALSE "Heroku toolbelt" "Everything you need to get started using heroku"\
     --separator=":" --width=700 --height=700)
 
 
