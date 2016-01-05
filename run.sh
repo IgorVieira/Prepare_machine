@@ -11,9 +11,11 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     FALSE "nodejs" "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."\
     FALSE "Bower" "Bower a package manager for the web (Requer NodeJS)"\
     FALSE "Ruby" "RVM e Ruby"\
+    FALSE "Jekyll" "Transform your plain text into static websites and blogs."\
     FALSE "Spotify" "Spotify is a digital music service that gives you access to millions of songs."\
     FALSE "PostgreSQL" "The world's most advanced open source database.."\
     FALSE "MongoDB" "A GIANT LEAP"\
+    FALSE "Heroku toolbelt" "Everything you need to get started using heroku"
     --separator=":" --width=700 --height=700)
 
 
@@ -78,6 +80,15 @@ if [[ $package =~ "MongoDB" ]]; then
  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
  sudo apt-get update
  sudo apt-get install mongodb-org
+fi
+
+if [[ $package =~"Jekyll" ]]; then
+  sudo apt-get install ruby ruby-dev make gcc nodejs
+  sudo gem install jekyll -v 2.5.3
+fi
+
+if [[$package =~"Heroku toolbelt"]]; then
+  wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 fi
 
 sudo apt-get autoremove
