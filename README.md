@@ -13,7 +13,7 @@
   1. NodeJS
   1. Bower (Requer NodeJS)
   1. RVM e Ruby
-  1. Jekyll
+  1. Jekyll (Requer Ruby)
   1. Spotify
   1. PostgreSQL
   1. MongoDB
