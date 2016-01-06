@@ -28,5 +28,16 @@ chmod +x run.sh
 sh run.sh
 ```
 
+ Or
+ ```
+  sudo apt-get install unzip
+  wget https://github.com/IgorVieira/run_machine/archive/master.zip
+  unzip run_machine-master.ziṕ
+  cd run_machine-master
+  chmod +x run.sh
+  sh run.sh
+  
+ ```
+
 
 And...Thats it!
