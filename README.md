@@ -20,7 +20,7 @@
   1. Heroku toolbelt
 
 ## Usage
-
+- If you have install git
 ```
 git clone git@github.com:IgorVieira/run_machine.git
 cd run_machine
