@@ -7,7 +7,7 @@
 ## Packages:
 
 
-  1. Sublime Text 3
+  1. Atom
   1. Google Chrome
   1. Git 
   1. NodeJS
