@@ -5,7 +5,7 @@
 
 
 package=$(zenity  --list  --text "Select the packages to be installed." --checklist  --column "Install" --column "Name" --column "Description"\
-    FALSE "Sublime Text 3" "Sublime Text is a sophisticated text editor for code, markup and prose."\
+    FALSE "Atom" "A hackable text editor for the 21st Century."\
     FALSE "Chrome" "A browser to your computer, phone and tablet."\
     FALSE "Git" "Git is a free and open source distributed version control system."\
     FALSE "nodejs" "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."\
@@ -19,10 +19,10 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     --separator=":" --width=700 --height=700)
 
 
-if [[ $package =~ "Sublime Text 3" ]]; then
-  sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+if [[ $package =~ "Atom" ]]; then
+  sudo add-apt-repository ppa:webupd8team/atom
   sudo apt-get update
-  sudo apt-get -y install sublime-text-installer
+  sudo apt-get install atom
 fi
 
 
