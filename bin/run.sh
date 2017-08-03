@@ -79,7 +79,7 @@ if [[ $package =~ "Spotify" ]]; then
 fi
 
 if [[ $package =~ "Discord" ]]; then
-   wget https://discordapp.com/api/download?platform=linux&format=deb
+   wget --quiet -O - https://discordapp.com/api/download?platform=linux&format=deb
    sudo dpkg -i discord-*.*.*.deb
 fi
 
