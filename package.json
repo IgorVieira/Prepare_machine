@@ -1,0 +1,29 @@
+{
+  "name": "run_machine",
+  "version": "1.0.0",
+  "description": "*This is a leaner version of a package installation script to an OS Debian / Ubuntu.* - PS: MongoDB(MongoDB only for version 14.10 and earlier)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorVieira/run_machine.git"
+  },
+  "keywords": [
+    "shell",
+    "manager",
+    "makefile",
+    "ruby",
+    "rails",
+    "node",
+    "editor",
+    "support"
+  ],
+  "author": "Igor Vieira <igor.p.r.vieira@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorVieira/run_machine/issues"
+  },
+  "homepage": "https://github.com/IgorVieira/run_machine#readme"
+}
