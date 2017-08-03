@@ -19,7 +19,7 @@
   1. Heroku toolbelt
 
 ## Usage
-# If you have install git
+### If you have install git
 ```
 git clone git@github.com:IgorVieira/run_machine.git
 cd run_machine
@@ -27,7 +27,7 @@ chmod +x run.sh
 sh run.sh
 ```
 
-# Or
+### Or
 ```
 sudo apt-get install unzip
 wget https://github.com/IgorVieira/run_machine/archive/master.zip
