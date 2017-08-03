@@ -10,10 +10,11 @@
   1. VSCode
   1. Google Chrome
   1. Git 
-  1. NodeJS
-  1. RVM e Ruby
+  1. NodeJS(Stable)
+  1. Ruby and Rails(5.1.2)
   1. Jekyll (Requer Ruby)
   1. Spotify
+  1. Discord
   1. PostgreSQL
   1. MongoDB
   1. Heroku toolbelt
