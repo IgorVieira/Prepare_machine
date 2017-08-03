@@ -5,7 +5,7 @@
 
 
 package=$(zenity  --list  --text "Select the packages to be installed." --checklist  --column "Install" --column "Name" --column "Description"\
-    FALSE "Atom" "A hackable text editor for the 21st Century."\
+    FALSE "VSCode" "VSCode editor."\
     FALSE "Chrome" "A browser to your computer, phone and tablet."\
     FALSE "Git" "Git is a free and open source distributed version control system."\
     FALSE "nodejs" "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."\
@@ -19,10 +19,11 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     --separator=":" --width=700 --height=700)
 
 
-if [[ $package =~ "Atom" ]]; then
-  sudo add-apt-repository ppa:webupd8team/atom
+if [[ $package =~ "VSCode" ]]; then
+  sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
   sudo apt-get update
-  sudo apt-get install atom
+  sudo apt-get install ubuntu-make
+  umake web visual-studio-code
 fi
 
 
@@ -49,9 +50,6 @@ if [[ $package =~ "node" ]]; then
   echo 'export PATH=$HOME/.node/bin:$PATH' >> ~/.bashrc
 fi
 
-if [[ $package =~ "Bower" ]]; then
-  sudo npm install -g  bower
-fi
 
 if [[ $package =~ "Ruby" ]]; then
     sudo apt-get install -y curl
@@ -88,7 +86,7 @@ if [[ $package =~"Jekyll" ]]; then
 fi
 
 if [[$package =~"Heroku toolbelt"]]; then
-  wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 fi
 
 sudo apt-get autoremove
