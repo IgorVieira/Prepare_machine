@@ -24,7 +24,7 @@
 ### If you have install git
 ```
 git clone git@github.com:IgorVieira/run_machine.git
-cd run_machine
+cd run_setup
 make start
 ```
 
@@ -33,7 +33,7 @@ make start
 sudo apt-get install unzip
 wget https://github.com/IgorVieira/run_machine/archive/master.zip
 unzip run_machine-master.ziṕ
-cd run_machine-master
+cd run_setup-master
 make start
 
 ```
