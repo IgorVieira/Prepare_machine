@@ -13,6 +13,8 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     FALSE "Ruby" "Ruby and Rails(5.1.2)"\
     FALSE "Jekyll" "Transform your plain text into static websites and blogs."\
     FALSE "Spotify" "Spotify is a digital music service that gives you access to millions of songs."\
+    FALSE "Discord" "Free Voice and Text Chat for Games." \
+    FALSE "Slack" "Slack(2.7.0) - Where work happens." \
     FALSE "PostgreSQL" "The world's most advanced open source database.."\
     FALSE "MongoDB" "MongoDB for Debian/Ubuntu version 16.04"\
     FALSE "Heroku toolbelt" "Everything you need to get started using heroku"\
@@ -75,6 +77,18 @@ if [[ $package =~ "Spotify" ]]; then
   sudo apt-get update
   sudo apt-get install -y spotify-client
 fi
+
+if [[ $package =~ "Discord" ]]; then
+   wget --quiet -O - https://discordapp.com/api/download?platform=linux&format=deb
+   sudo dpkg -i discord-*.*.*.deb
+fi
+
+
+if [[ $package =~ "Slack" ]]; then
+   wget --quiet -O - https://downloads.slack-edge.com/linux_releases/slack-desktop-2.7.0-amd64.deb
+   sudo dpkg -i slack-desktop-2.7.0-amd64.deb
+fi
+
 
 if [[ $package =~ "PostgreSQL" ]]; then
   sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
