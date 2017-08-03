@@ -10,7 +10,7 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     FALSE "Git" "Git is a free and open source distributed version control system."\
     FALSE "nodejs" "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."\
     FALSE "Bower" "Bower a package manager for the web (Requer NodeJS)"\
-    FALSE "Ruby" "RVM e Ruby"\
+    FALSE "Ruby" "Ruby and Rails(5.1.2)"\
     FALSE "Jekyll" "Transform your plain text into static websites and blogs."\
     FALSE "Spotify" "Spotify is a digital music service that gives you access to millions of songs."\
     FALSE "PostgreSQL" "The world's most advanced open source database.."\
@@ -70,7 +70,7 @@ fi
 
 
 if [[ $package =~ "Spotify" ]]; then
-  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
+  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
   echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
   sudo apt-get update
   sudo apt-get install -y spotify-client
