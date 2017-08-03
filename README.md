@@ -15,6 +15,7 @@
   1. Jekyll (Requer Ruby)
   1. Spotify
   1. Discord
+  1. Slack
   1. PostgreSQL
   1. MongoDB
   1. Heroku toolbelt
