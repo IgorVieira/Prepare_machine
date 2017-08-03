@@ -14,7 +14,7 @@ package=$(zenity  --list  --text "Select the packages to be installed." --checkl
     FALSE "Jekyll" "Transform your plain text into static websites and blogs."\
     FALSE "Spotify" "Spotify is a digital music service that gives you access to millions of songs."\
     FALSE "PostgreSQL" "The world's most advanced open source database.."\
-    FALSE "MongoDB" "A GIANT LEAP"\
+    FALSE "MongoDB" "MongoDB for Debian/Ubuntu version 16.04"\
     FALSE "Heroku toolbelt" "Everything you need to get started using heroku"\
     --separator=":" --width=700 --height=700)
 
@@ -52,9 +52,20 @@ fi
 
 
 if [[ $package =~ "Ruby" ]]; then
-    sudo apt-get install -y curl
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-    curl -sSL https://get.rvm.io | bash -s stable
+    sudo apt-get update
+    sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
+    git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    source ~/.bashrc
+    type rbenv
+    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+    rbenv install -l
+    rbenv install 2.3.1
+    rbenv global 2.3.1
+    echo "gem: --no-document" > ~/.gemrc
+    gem install bundler
+    gem install rails -v 5.1.2
 fi
 
 
@@ -74,10 +85,10 @@ if [[ $package =~ "PostgreSQL" ]]; then
 fi
 
 if [[ $package =~ "MongoDB" ]]; then
- sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
- echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
  sudo apt-get update
- sudo apt-get install mongodb-org
+ sudo apt-get install -y mongodb-org
 fi
 
 if [[ $package =~"Jekyll" ]]; then
